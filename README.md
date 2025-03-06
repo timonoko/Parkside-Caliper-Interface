@@ -7,4 +7,7 @@ But protocol is little bit different.
 
 You can connect ESP8266 directly, you dont need even battery, because 3V battery.
 
+Negative numbers not done, but they are probably the about same as with herr Wandel. (Last 5 bits
+are not zero?)
+
 <img src=pic_37_2.jpg>

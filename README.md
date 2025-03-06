@@ -1,4 +1,4 @@
-This otherwise the same as https://github.com/Matthias-Wandel/caliper-interface
+This is otherwise the same as https://github.com/Matthias-Wandel/caliper-interface
 
 But Lidl Parkside Caliper has 3V battery and thus the signal level is 2V, so
 level adjustement not needed.

@@ -7,3 +7,4 @@ But protocol is little bit different.
 
 You can connect ESP8266 directly, you dont need even battery, because 3V battery.
 
+<img src=pic_37_2.jpg>

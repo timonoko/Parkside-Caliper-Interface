@@ -5,7 +5,7 @@ level adjustement not needed.
 
 Protocol is little different, bits are grouped in fives, with longer pause betweeen. 
 
-You can connect ESP8266 directly, you dont need even battery, because 3V battery already in caliper.  
+You can connect ESP8266 directly, you dont need even battery, because 3V available in caliper.  
 
 <img src=pic_37_2.jpg>
 <img src=iik.jpg>

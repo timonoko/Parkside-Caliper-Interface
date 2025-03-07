@@ -1,0 +1,4 @@
+mpremote u1 fs cp :loki.txt loki.txt
+cat loki.txt
+
+

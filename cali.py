@@ -14,14 +14,17 @@ def almost_equal(num1, num2):
 
 prevnum=170
 
-loki="NOT OPEN"
+
+loki=open('loki.txt','a')
+loki.write("==========\n")
+
+
 mittaus=1
 
 while True:
     if nuppi.value()==0:
         led.value(1)
         print(prevnum,mittaus,"<===")
-        if loki=="NOT OPEN":  loki=open('loki.txt','w')
         loki.write(str(prevnum)+" "+str(mittaus)+"\n")
         time.sleep(1)
         led.value(0)

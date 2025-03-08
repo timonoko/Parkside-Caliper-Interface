@@ -9,15 +9,11 @@ nuppi=Pin(0,Pin.IN)
 
 led.value(0)
 
-def almost_equal(num1, num2):
-    return abs(num1-num2)<1
-
-prevnum=170
-
+prevnum=160
+JUMP=0
 
 loki=open('loki.txt','a')
 loki.write("==========\n")
-
 
 mittaus=1
 
@@ -42,10 +38,17 @@ while True:
             if data.value()==1: sign=sign|1<<z
             while clock.value()==1: pass
         if sign==1: numero=-numero
-        if numero==prevnum: pass
-        elif numero<160 and almost_equal(prevnum,numero):
-            print(numero)
-        prevnum=numero
+        if abs(numero)<160 and abs(numero-prevnum)<1:
+            numero=round((numero+9*prevnum)/10,2) # heavy filtering 
+            if numero!=prevnum or JUMP==-1:
+                print(numero)
+                JUMP=0
+            prevnum=numero
+        elif JUMP>5: # Big Jump, forget the accuracy
+            print("!")
+            prevnum=numero
+            JUMP=-1
+        else: JUMP+=1
         time.sleep(0.2)
         
     

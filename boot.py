@@ -11,7 +11,7 @@ for x in range(10):
     ledi=(ledi+1)%2
     if nuppi.value()==0: break
     print('waiting',10-x)
-    time.sleep(0.5)
+    time.sleep(0.2)
     if x==9: import cali
 
 led.value(1)

@@ -39,7 +39,7 @@ while True:
             while clock.value()==1: pass
         if sign==1: numero=-numero
         if abs(numero)<160 and abs(numero-prevnum)<1:
-            numero=round((numero+9*prevnum)/10,2) # heavy filtering 
+            numero=round((numero+3*prevnum)/4,2) # averaging 
             if numero!=prevnum or JUMP==-1:
                 print(numero)
                 JUMP=0

@@ -4,27 +4,29 @@ from machine import Pin
 clock=Pin(5,Pin.IN)
 data=Pin(4,Pin.IN)
 led=Pin(2,Pin.OUT)
-
 nuppi=Pin(0,Pin.IN)
 
 led.value(0)
 
 prevnum=160
 JUMP=0
-
-loki=open('loki.txt','a')
-loki.write("==========\n")
-
 mittaus=1
 
 while True:
     if nuppi.value()==0:
-        led.value(1)
         print(prevnum,mittaus,"<===")
+        if mittaus==1:
+            loki=open('loki.txt','a')
+            loki.write("==========\n")
         loki.write(str(prevnum)+" "+str(mittaus)+"\n")
-        time.sleep(1)
+        ledi=1
+        for x in range(2*mittaus):
+            led.value(ledi)
+            time.sleep(0.5/mittaus)
+            ledi=(ledi+1)%2
         led.value(0)
         mittaus+=1
+        while nuppi.value()==0: pass
     if clock.value()==0:
         numero=0
         for z in range(20):

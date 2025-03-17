@@ -1,8 +1,10 @@
 import time
 from machine import Pin
 
-clock=Pin(5,Pin.IN)
-data=Pin(4,Pin.IN)
+#clock=Pin(5,Pin.IN)
+#data=Pin(4,Pin.IN)
+clock=Pin(4,Pin.IN)
+data=Pin(5,Pin.IN)
 led=Pin(2,Pin.OUT)
 nuppi=Pin(0,Pin.IN)
 
@@ -47,7 +49,7 @@ while True:
                 JUMP=0
             prevnum=numero
         elif JUMP>5: # Big Jump, forget the accuracy
-            print("!")
+            print("!",numero)
             prevnum=numero
             JUMP=-1
         else: JUMP+=1

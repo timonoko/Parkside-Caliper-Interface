@@ -10,4 +10,6 @@ You can connect ESP8266 directly, you dont need even battery, because 3V availab
 <img src=pic_37_2.jpg>
 Loki-button writes values into ESP-memory, no computer needed:
 <img src=iik2.jpg>
+Second one had datalines crossed. Maybe.
+<img src=ook.jpg>
 <img src=iik.jpg>
